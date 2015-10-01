@@ -1,0 +1,756 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E40839B91BB3873C009768AC /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E40839B81BB3873C009768AC /* TPKeyboardAvoidingScrollView.m */; settings = {ASSET_TAGS = (); }; };
+		E40D9E141BB4665500F3014F /* icon_person.png in Resources */ = {isa = PBXBuildFile; fileRef = E40D9E121BB4665500F3014F /* icon_person.png */; settings = {ASSET_TAGS = (); }; };
+		E40D9E151BB4665500F3014F /* icon_person@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E40D9E131BB4665500F3014F /* icon_person@2x.png */; settings = {ASSET_TAGS = (); }; };
+		E4454A451BB3AC2B004DB1BA /* GravatarUrlBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E4454A441BB3AC2B004DB1BA /* GravatarUrlBuilder.m */; settings = {ASSET_TAGS = (); }; };
+		E4473DFD1BA221F800CA5902 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4473DFC1BA221F800CA5902 /* CameraViewController.m */; };
+		E44D6CA31BB2E81C00CBC118 /* LoginSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44D6CA21BB2E81C00CBC118 /* LoginSignupViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E48161561BA0718500F4BF35 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E48161551BA0718500F4BF35 /* EditProfileViewController.m */; };
+		E481615C1BA0897900F4BF35 /* CameraTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E481615B1BA0897900F4BF35 /* CameraTableViewController.m */; };
+		E4CA5D641B9F26C400A17BB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CA5D631B9F26C400A17BB0 /* main.m */; };
+		E4CA5D671B9F26C400A17BB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CA5D661B9F26C400A17BB0 /* AppDelegate.m */; };
+		E4CA5D701B9F26C400A17BB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4CA5D6E1B9F26C400A17BB0 /* Main.storyboard */; };
+		E4CA5D721B9F26C400A17BB0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4CA5D711B9F26C400A17BB0 /* Images.xcassets */; };
+		E4CA5D751B9F26C400A17BB0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4CA5D731B9F26C400A17BB0 /* LaunchScreen.xib */; };
+		E4CA5D811B9F26C400A17BB0 /* LotusConnectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CA5D801B9F26C400A17BB0 /* LotusConnectTests.m */; };
+		E4CA5D901B9F285600A17BB0 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = E4CA5D8A1B9F285500A17BB0 /* camera.png */; };
+		E4CA5D911B9F285600A17BB0 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4CA5D8B1B9F285600A17BB0 /* camera@2x.png */; };
+		E4CA5D921B9F285600A17BB0 /* friends.png in Resources */ = {isa = PBXBuildFile; fileRef = E4CA5D8C1B9F285600A17BB0 /* friends.png */; };
+		E4CA5D931B9F285600A17BB0 /* friends@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4CA5D8D1B9F285600A17BB0 /* friends@2x.png */; };
+		E4CA5D941B9F285600A17BB0 /* inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = E4CA5D8E1B9F285600A17BB0 /* inbox.png */; };
+		E4CA5D951B9F285600A17BB0 /* inbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4CA5D8F1B9F285600A17BB0 /* inbox@2x.png */; };
+		E4CA5D9A1B9F314600A17BB0 /* InboxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CA5D991B9F314600A17BB0 /* InboxTableViewController.m */; };
+		E4CA5DA31B9F400900A17BB0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CA5D9C1B9F400900A17BB0 /* Bolts.framework */; };
+		E4CA5DA41B9F400900A17BB0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CA5D9D1B9F400900A17BB0 /* Parse.framework */; };
+		E4CA5DA51B9F400900A17BB0 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CA5D9E1B9F400900A17BB0 /* ParseCrashReporting.framework */; };
+		E4CA5DA61B9F400900A17BB0 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CA5D9F1B9F400900A17BB0 /* ParseFacebookUtils.framework */; };
+		E4CA5DA71B9F400900A17BB0 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CA5DA01B9F400900A17BB0 /* ParseFacebookUtilsV4.framework */; };
+		E4CA5DA81B9F400900A17BB0 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CA5DA11B9F400900A17BB0 /* ParseTwitterUtils.framework */; };
+		E4CA5DA91B9F400900A17BB0 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CA5DA21B9F400900A17BB0 /* ParseUI.framework */; };
+		E4CA5DAB1B9F407800A17BB0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CA5DAA1B9F407800A17BB0 /* AudioToolbox.framework */; };
+		E4CA5DB71B9F40F700A17BB0 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CA5DAC1B9F40F700A17BB0 /* Accounts.framework */; };
+		E4CA5DB81B9F40F700A17BB0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CA5DAD1B9F40F700A17BB0 /* CFNetwork.framework */; };
+		E4CA5DB91B9F40F700A17BB0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CA5DAE1B9F40F700A17BB0 /* CoreGraphics.framework */; };
+		E4CA5DBA1B9F40F700A17BB0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CA5DAF1B9F40F700A17BB0 /* CoreLocation.framework */; };
+		E4CA5DBB1B9F40F700A17BB0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CA5DB01B9F40F700A17BB0 /* libsqlite3.dylib */; };
+		E4CA5DBC1B9F40F700A17BB0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CA5DB11B9F40F700A17BB0 /* libz.dylib */; };
+		E4CA5DBD1B9F40F700A17BB0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CA5DB21B9F40F700A17BB0 /* QuartzCore.framework */; };
+		E4CA5DBE1B9F40F700A17BB0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CA5DB31B9F40F700A17BB0 /* Security.framework */; };
+		E4CA5DBF1B9F40F700A17BB0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CA5DB41B9F40F700A17BB0 /* Social.framework */; };
+		E4CA5DC01B9F40F700A17BB0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CA5DB51B9F40F700A17BB0 /* StoreKit.framework */; };
+		E4CA5DC11B9F40F700A17BB0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CA5DB61B9F40F700A17BB0 /* SystemConfiguration.framework */; };
+		E4CA5DC41B9F42A000A17BB0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CA5DC31B9F42A000A17BB0 /* LoginViewController.m */; };
+		E4CA5DC71B9F42B200A17BB0 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CA5DC61B9F42B200A17BB0 /* SignupViewController.m */; };
+		E4CA5DCA1B9F569A00A17BB0 /* VerifyEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CA5DC91B9F569A00A17BB0 /* VerifyEmailViewController.m */; };
+		E4CA5DD31B9F7DB400A17BB0 /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CA5DD21B9F7DB400A17BB0 /* ContactTableViewController.m */; };
+		E4CA5DD61B9F867000A17BB0 /* ContactInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CA5DD51B9F867000A17BB0 /* ContactInfoViewController.m */; };
+		E4CA5DD91B9FB17500A17BB0 /* ContactInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CA5DD81B9FB17500A17BB0 /* ContactInfoTableViewController.m */; };
+		E4CFE83E1BA0E73E00FB02F1 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CFE83D1BA0E73E00FB02F1 /* ImageViewController.m */; };
+		E4DA03E31BA4680E007777B1 /* SignupCompanyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DA03E21BA4680E007777B1 /* SignupCompanyTableViewController.m */; };
+		E4DA03E61BA46C23007777B1 /* CompanyKeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DA03E51BA46C23007777B1 /* CompanyKeyViewController.m */; };
+		E4EBD9831BAB9C970048142C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EBD9821BAB9C970048142C /* MessageUI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4CA5D7B1B9F26C400A17BB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4CA5D561B9F26C300A17BB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4CA5D5D1B9F26C400A17BB0;
+			remoteInfo = LotusConnect;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E40839B81BB3873C009768AC /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		E40839BA1BB38743009768AC /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		E40D9E121BB4665500F3014F /* icon_person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_person.png; sourceTree = "<group>"; };
+		E40D9E131BB4665500F3014F /* icon_person@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_person@2x.png"; sourceTree = "<group>"; };
+		E4454A441BB3AC2B004DB1BA /* GravatarUrlBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GravatarUrlBuilder.m; sourceTree = "<group>"; };
+		E4454A461BB3AC33004DB1BA /* GravatarUrlBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GravatarUrlBuilder.h; sourceTree = "<group>"; };
+		E4473DFB1BA221F800CA5902 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		E4473DFC1BA221F800CA5902 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		E44D6CA11BB2E81C00CBC118 /* LoginSignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginSignupViewController.h; sourceTree = "<group>"; };
+		E44D6CA21BB2E81C00CBC118 /* LoginSignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginSignupViewController.m; sourceTree = "<group>"; };
+		E48161541BA0718500F4BF35 /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
+		E48161551BA0718500F4BF35 /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
+		E481615A1BA0897900F4BF35 /* CameraTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraTableViewController.h; sourceTree = "<group>"; };
+		E481615B1BA0897900F4BF35 /* CameraTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraTableViewController.m; sourceTree = "<group>"; };
+		E4CA5D5E1B9F26C400A17BB0 /* LotusConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LotusConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4CA5D621B9F26C400A17BB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4CA5D631B9F26C400A17BB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E4CA5D651B9F26C400A17BB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E4CA5D661B9F26C400A17BB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E4CA5D6F1B9F26C400A17BB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E4CA5D711B9F26C400A17BB0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E4CA5D741B9F26C400A17BB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E4CA5D7A1B9F26C400A17BB0 /* LotusConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LotusConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4CA5D7F1B9F26C400A17BB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4CA5D801B9F26C400A17BB0 /* LotusConnectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LotusConnectTests.m; sourceTree = "<group>"; };
+		E4CA5D8A1B9F285500A17BB0 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		E4CA5D8B1B9F285600A17BB0 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
+		E4CA5D8C1B9F285600A17BB0 /* friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friends.png; sourceTree = "<group>"; };
+		E4CA5D8D1B9F285600A17BB0 /* friends@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friends@2x.png"; sourceTree = "<group>"; };
+		E4CA5D8E1B9F285600A17BB0 /* inbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inbox.png; sourceTree = "<group>"; };
+		E4CA5D8F1B9F285600A17BB0 /* inbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inbox@2x.png"; sourceTree = "<group>"; };
+		E4CA5D981B9F314600A17BB0 /* InboxTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxTableViewController.h; sourceTree = "<group>"; };
+		E4CA5D991B9F314600A17BB0 /* InboxTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxTableViewController.m; sourceTree = "<group>"; };
+		E4CA5D9C1B9F400900A17BB0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		E4CA5D9D1B9F400900A17BB0 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		E4CA5D9E1B9F400900A17BB0 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		E4CA5D9F1B9F400900A17BB0 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		E4CA5DA01B9F400900A17BB0 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		E4CA5DA11B9F400900A17BB0 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
+		E4CA5DA21B9F400900A17BB0 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		E4CA5DAA1B9F407800A17BB0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E4CA5DAC1B9F40F700A17BB0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		E4CA5DAD1B9F40F700A17BB0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E4CA5DAE1B9F40F700A17BB0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E4CA5DAF1B9F40F700A17BB0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E4CA5DB01B9F40F700A17BB0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		E4CA5DB11B9F40F700A17BB0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		E4CA5DB21B9F40F700A17BB0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E4CA5DB31B9F40F700A17BB0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E4CA5DB41B9F40F700A17BB0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		E4CA5DB51B9F40F700A17BB0 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		E4CA5DB61B9F40F700A17BB0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E4CA5DC21B9F42A000A17BB0 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		E4CA5DC31B9F42A000A17BB0 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		E4CA5DC51B9F42B200A17BB0 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
+		E4CA5DC61B9F42B200A17BB0 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
+		E4CA5DC81B9F569A00A17BB0 /* VerifyEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VerifyEmailViewController.h; path = LotusConnect/VerifyEmailViewController.h; sourceTree = "<group>"; };
+		E4CA5DC91B9F569A00A17BB0 /* VerifyEmailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VerifyEmailViewController.m; path = LotusConnect/VerifyEmailViewController.m; sourceTree = "<group>"; };
+		E4CA5DD11B9F7DB400A17BB0 /* ContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewController.h; sourceTree = "<group>"; };
+		E4CA5DD21B9F7DB400A17BB0 /* ContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewController.m; sourceTree = "<group>"; };
+		E4CA5DD41B9F867000A17BB0 /* ContactInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactInfoViewController.h; sourceTree = "<group>"; };
+		E4CA5DD51B9F867000A17BB0 /* ContactInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactInfoViewController.m; sourceTree = "<group>"; };
+		E4CA5DD71B9FB17500A17BB0 /* ContactInfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactInfoTableViewController.h; sourceTree = "<group>"; };
+		E4CA5DD81B9FB17500A17BB0 /* ContactInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactInfoTableViewController.m; sourceTree = "<group>"; };
+		E4CFE83C1BA0E73E00FB02F1 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		E4CFE83D1BA0E73E00FB02F1 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		E4DA03E11BA4680E007777B1 /* SignupCompanyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignupCompanyTableViewController.h; path = ../SignupCompanyTableViewController.h; sourceTree = "<group>"; };
+		E4DA03E21BA4680E007777B1 /* SignupCompanyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignupCompanyTableViewController.m; path = ../SignupCompanyTableViewController.m; sourceTree = "<group>"; };
+		E4DA03E41BA46C23007777B1 /* CompanyKeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CompanyKeyViewController.h; path = ../CompanyKeyViewController.h; sourceTree = "<group>"; };
+		E4DA03E51BA46C23007777B1 /* CompanyKeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CompanyKeyViewController.m; path = ../CompanyKeyViewController.m; sourceTree = "<group>"; };
+		E4EBD9821BAB9C970048142C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4CA5D5B1B9F26C400A17BB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4EBD9831BAB9C970048142C /* MessageUI.framework in Frameworks */,
+				E4CA5DB71B9F40F700A17BB0 /* Accounts.framework in Frameworks */,
+				E4CA5DB81B9F40F700A17BB0 /* CFNetwork.framework in Frameworks */,
+				E4CA5DB91B9F40F700A17BB0 /* CoreGraphics.framework in Frameworks */,
+				E4CA5DBA1B9F40F700A17BB0 /* CoreLocation.framework in Frameworks */,
+				E4CA5DBB1B9F40F700A17BB0 /* libsqlite3.dylib in Frameworks */,
+				E4CA5DBC1B9F40F700A17BB0 /* libz.dylib in Frameworks */,
+				E4CA5DBD1B9F40F700A17BB0 /* QuartzCore.framework in Frameworks */,
+				E4CA5DBE1B9F40F700A17BB0 /* Security.framework in Frameworks */,
+				E4CA5DBF1B9F40F700A17BB0 /* Social.framework in Frameworks */,
+				E4CA5DC01B9F40F700A17BB0 /* StoreKit.framework in Frameworks */,
+				E4CA5DC11B9F40F700A17BB0 /* SystemConfiguration.framework in Frameworks */,
+				E4CA5DAB1B9F407800A17BB0 /* AudioToolbox.framework in Frameworks */,
+				E4CA5DA41B9F400900A17BB0 /* Parse.framework in Frameworks */,
+				E4CA5DA51B9F400900A17BB0 /* ParseCrashReporting.framework in Frameworks */,
+				E4CA5DA91B9F400900A17BB0 /* ParseUI.framework in Frameworks */,
+				E4CA5DA61B9F400900A17BB0 /* ParseFacebookUtils.framework in Frameworks */,
+				E4CA5DA31B9F400900A17BB0 /* Bolts.framework in Frameworks */,
+				E4CA5DA81B9F400900A17BB0 /* ParseTwitterUtils.framework in Frameworks */,
+				E4CA5DA71B9F400900A17BB0 /* ParseFacebookUtilsV4.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4CA5D771B9F26C400A17BB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E40839B41BB3439B009768AC /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				E4454A461BB3AC33004DB1BA /* GravatarUrlBuilder.h */,
+				E4454A441BB3AC2B004DB1BA /* GravatarUrlBuilder.m */,
+				E40839BA1BB38743009768AC /* TPKeyboardAvoidingScrollView.h */,
+				E40839B81BB3873C009768AC /* TPKeyboardAvoidingScrollView.m */,
+			);
+			name = GitHub;
+			sourceTree = "<group>";
+		};
+		E4473DFE1BA242C800CA5902 /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+				E4CFE83C1BA0E73E00FB02F1 /* ImageViewController.h */,
+				E4CFE83D1BA0E73E00FB02F1 /* ImageViewController.m */,
+				E4CA5D981B9F314600A17BB0 /* InboxTableViewController.h */,
+				E4CA5D991B9F314600A17BB0 /* InboxTableViewController.m */,
+			);
+			name = Inbox;
+			sourceTree = "<group>";
+		};
+		E4473DFF1BA242ED00CA5902 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E44D6CA11BB2E81C00CBC118 /* LoginSignupViewController.h */,
+				E44D6CA21BB2E81C00CBC118 /* LoginSignupViewController.m */,
+				E4CA5DC21B9F42A000A17BB0 /* LoginViewController.h */,
+				E4CA5DC31B9F42A000A17BB0 /* LoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		E4473E001BA242F400CA5902 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				E4DA03E41BA46C23007777B1 /* CompanyKeyViewController.h */,
+				E4DA03E51BA46C23007777B1 /* CompanyKeyViewController.m */,
+				E4DA03E11BA4680E007777B1 /* SignupCompanyTableViewController.h */,
+				E4DA03E21BA4680E007777B1 /* SignupCompanyTableViewController.m */,
+				E4CA5DC51B9F42B200A17BB0 /* SignupViewController.h */,
+				E4CA5DC61B9F42B200A17BB0 /* SignupViewController.m */,
+			);
+			name = Signup;
+			sourceTree = "<group>";
+		};
+		E4473E011BA2430100CA5902 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				E4CA5DD11B9F7DB400A17BB0 /* ContactTableViewController.h */,
+				E4CA5DD21B9F7DB400A17BB0 /* ContactTableViewController.m */,
+				E4CA5DD41B9F867000A17BB0 /* ContactInfoViewController.h */,
+				E4CA5DD51B9F867000A17BB0 /* ContactInfoViewController.m */,
+			);
+			name = Contacts;
+			sourceTree = "<group>";
+		};
+		E4473E021BA2430B00CA5902 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				E481615A1BA0897900F4BF35 /* CameraTableViewController.h */,
+				E481615B1BA0897900F4BF35 /* CameraTableViewController.m */,
+			);
+			name = Camera;
+			sourceTree = "<group>";
+		};
+		E4CA5D551B9F26C300A17BB0 = {
+			isa = PBXGroup;
+			children = (
+				E4CA5D6E1B9F26C400A17BB0 /* Main.storyboard */,
+				E4CA5D601B9F26C400A17BB0 /* LotusConnect */,
+				E4CA5D7D1B9F26C400A17BB0 /* LotusConnectTests */,
+				E4CA5D5F1B9F26C400A17BB0 /* Products */,
+				E4CA5D9B1B9F3FEB00A17BB0 /* frameworks */,
+				E4CA5D961B9F288800A17BB0 /* Images */,
+			);
+			sourceTree = "<group>";
+		};
+		E4CA5D5F1B9F26C400A17BB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4CA5D5E1B9F26C400A17BB0 /* LotusConnect.app */,
+				E4CA5D7A1B9F26C400A17BB0 /* LotusConnectTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4CA5D601B9F26C400A17BB0 /* LotusConnect */ = {
+			isa = PBXGroup;
+			children = (
+				E40839B41BB3439B009768AC /* GitHub */,
+				E4CA5D651B9F26C400A17BB0 /* AppDelegate.h */,
+				E4CA5D661B9F26C400A17BB0 /* AppDelegate.m */,
+				E4473E021BA2430B00CA5902 /* Camera */,
+				E4473E011BA2430100CA5902 /* Contacts */,
+				E4DA036A1BA3017B007777B1 /* Edit Profile */,
+				E4473DFE1BA242C800CA5902 /* Inbox */,
+				E4473DFF1BA242ED00CA5902 /* Login */,
+				E4473E001BA242F400CA5902 /* Signup */,
+				E4DA03691BA30152007777B1 /* Unused */,
+				E4CA5D731B9F26C400A17BB0 /* LaunchScreen.xib */,
+				E4CA5D711B9F26C400A17BB0 /* Images.xcassets */,
+				E4CA5D611B9F26C400A17BB0 /* Supporting Files */,
+			);
+			path = LotusConnect;
+			sourceTree = "<group>";
+		};
+		E4CA5D611B9F26C400A17BB0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4CA5D621B9F26C400A17BB0 /* Info.plist */,
+				E4CA5D631B9F26C400A17BB0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E4CA5D7D1B9F26C400A17BB0 /* LotusConnectTests */ = {
+			isa = PBXGroup;
+			children = (
+				E4CA5D801B9F26C400A17BB0 /* LotusConnectTests.m */,
+				E4CA5D7E1B9F26C400A17BB0 /* Supporting Files */,
+			);
+			path = LotusConnectTests;
+			sourceTree = "<group>";
+		};
+		E4CA5D7E1B9F26C400A17BB0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4CA5D7F1B9F26C400A17BB0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E4CA5D961B9F288800A17BB0 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E40D9E121BB4665500F3014F /* icon_person.png */,
+				E40D9E131BB4665500F3014F /* icon_person@2x.png */,
+				E4CA5D8F1B9F285600A17BB0 /* inbox@2x.png */,
+				E4CA5D8A1B9F285500A17BB0 /* camera.png */,
+				E4CA5D8B1B9F285600A17BB0 /* camera@2x.png */,
+				E4CA5D8C1B9F285600A17BB0 /* friends.png */,
+				E4CA5D8D1B9F285600A17BB0 /* friends@2x.png */,
+				E4CA5D8E1B9F285600A17BB0 /* inbox.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		E4CA5D9B1B9F3FEB00A17BB0 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4EBD9821BAB9C970048142C /* MessageUI.framework */,
+				E4CA5DAC1B9F40F700A17BB0 /* Accounts.framework */,
+				E4CA5DAD1B9F40F700A17BB0 /* CFNetwork.framework */,
+				E4CA5DAE1B9F40F700A17BB0 /* CoreGraphics.framework */,
+				E4CA5DAF1B9F40F700A17BB0 /* CoreLocation.framework */,
+				E4CA5DB01B9F40F700A17BB0 /* libsqlite3.dylib */,
+				E4CA5DB11B9F40F700A17BB0 /* libz.dylib */,
+				E4CA5DB21B9F40F700A17BB0 /* QuartzCore.framework */,
+				E4CA5DB31B9F40F700A17BB0 /* Security.framework */,
+				E4CA5DB41B9F40F700A17BB0 /* Social.framework */,
+				E4CA5DB51B9F40F700A17BB0 /* StoreKit.framework */,
+				E4CA5DB61B9F40F700A17BB0 /* SystemConfiguration.framework */,
+				E4CA5DAA1B9F407800A17BB0 /* AudioToolbox.framework */,
+				E4CA5D9C1B9F400900A17BB0 /* Bolts.framework */,
+				E4CA5D9D1B9F400900A17BB0 /* Parse.framework */,
+				E4CA5D9E1B9F400900A17BB0 /* ParseCrashReporting.framework */,
+				E4CA5D9F1B9F400900A17BB0 /* ParseFacebookUtils.framework */,
+				E4CA5DA01B9F400900A17BB0 /* ParseFacebookUtilsV4.framework */,
+				E4CA5DA11B9F400900A17BB0 /* ParseTwitterUtils.framework */,
+				E4CA5DA21B9F400900A17BB0 /* ParseUI.framework */,
+			);
+			name = frameworks;
+			sourceTree = "<group>";
+		};
+		E4DA03691BA30152007777B1 /* Unused */ = {
+			isa = PBXGroup;
+			children = (
+				E4CA5DC81B9F569A00A17BB0 /* VerifyEmailViewController.h */,
+				E4CA5DC91B9F569A00A17BB0 /* VerifyEmailViewController.m */,
+				E4CA5DD71B9FB17500A17BB0 /* ContactInfoTableViewController.h */,
+				E4CA5DD81B9FB17500A17BB0 /* ContactInfoTableViewController.m */,
+				E4473DFB1BA221F800CA5902 /* CameraViewController.h */,
+				E4473DFC1BA221F800CA5902 /* CameraViewController.m */,
+			);
+			name = Unused;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		E4DA036A1BA3017B007777B1 /* Edit Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E48161541BA0718500F4BF35 /* EditProfileViewController.h */,
+				E48161551BA0718500F4BF35 /* EditProfileViewController.m */,
+			);
+			name = "Edit Profile";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4CA5D5D1B9F26C400A17BB0 /* LotusConnect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4CA5D841B9F26C400A17BB0 /* Build configuration list for PBXNativeTarget "LotusConnect" */;
+			buildPhases = (
+				E4CA5D5A1B9F26C400A17BB0 /* Sources */,
+				E4CA5D5B1B9F26C400A17BB0 /* Frameworks */,
+				E4CA5D5C1B9F26C400A17BB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LotusConnect;
+			productName = LotusConnect;
+			productReference = E4CA5D5E1B9F26C400A17BB0 /* LotusConnect.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E4CA5D791B9F26C400A17BB0 /* LotusConnectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4CA5D871B9F26C400A17BB0 /* Build configuration list for PBXNativeTarget "LotusConnectTests" */;
+			buildPhases = (
+				E4CA5D761B9F26C400A17BB0 /* Sources */,
+				E4CA5D771B9F26C400A17BB0 /* Frameworks */,
+				E4CA5D781B9F26C400A17BB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4CA5D7C1B9F26C400A17BB0 /* PBXTargetDependency */,
+			);
+			name = LotusConnectTests;
+			productName = LotusConnectTests;
+			productReference = E4CA5D7A1B9F26C400A17BB0 /* LotusConnectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4CA5D561B9F26C300A17BB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Dee Greene";
+				TargetAttributes = {
+					E4CA5D5D1B9F26C400A17BB0 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 9F6TNKVJE8;
+					};
+					E4CA5D791B9F26C400A17BB0 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 9F6TNKVJE8;
+						TestTargetID = E4CA5D5D1B9F26C400A17BB0;
+					};
+				};
+			};
+			buildConfigurationList = E4CA5D591B9F26C300A17BB0 /* Build configuration list for PBXProject "LotusConnect" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E4CA5D551B9F26C300A17BB0;
+			productRefGroup = E4CA5D5F1B9F26C400A17BB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E4CA5D5D1B9F26C400A17BB0 /* LotusConnect */,
+				E4CA5D791B9F26C400A17BB0 /* LotusConnectTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E4CA5D5C1B9F26C400A17BB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4CA5D701B9F26C400A17BB0 /* Main.storyboard in Resources */,
+				E4CA5D921B9F285600A17BB0 /* friends.png in Resources */,
+				E4CA5D931B9F285600A17BB0 /* friends@2x.png in Resources */,
+				E4CA5D911B9F285600A17BB0 /* camera@2x.png in Resources */,
+				E40D9E151BB4665500F3014F /* icon_person@2x.png in Resources */,
+				E4CA5D941B9F285600A17BB0 /* inbox.png in Resources */,
+				E40D9E141BB4665500F3014F /* icon_person.png in Resources */,
+				E4CA5D751B9F26C400A17BB0 /* LaunchScreen.xib in Resources */,
+				E4CA5D901B9F285600A17BB0 /* camera.png in Resources */,
+				E4CA5D721B9F26C400A17BB0 /* Images.xcassets in Resources */,
+				E4CA5D951B9F285600A17BB0 /* inbox@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4CA5D781B9F26C400A17BB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4CA5D5A1B9F26C400A17BB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4CA5DCA1B9F569A00A17BB0 /* VerifyEmailViewController.m in Sources */,
+				E4DA03E31BA4680E007777B1 /* SignupCompanyTableViewController.m in Sources */,
+				E4CA5DC41B9F42A000A17BB0 /* LoginViewController.m in Sources */,
+				E48161561BA0718500F4BF35 /* EditProfileViewController.m in Sources */,
+				E44D6CA31BB2E81C00CBC118 /* LoginSignupViewController.m in Sources */,
+				E4CA5D9A1B9F314600A17BB0 /* InboxTableViewController.m in Sources */,
+				E4DA03E61BA46C23007777B1 /* CompanyKeyViewController.m in Sources */,
+				E4CA5D671B9F26C400A17BB0 /* AppDelegate.m in Sources */,
+				E4CA5DD61B9F867000A17BB0 /* ContactInfoViewController.m in Sources */,
+				E4CFE83E1BA0E73E00FB02F1 /* ImageViewController.m in Sources */,
+				E4CA5D641B9F26C400A17BB0 /* main.m in Sources */,
+				E4454A451BB3AC2B004DB1BA /* GravatarUrlBuilder.m in Sources */,
+				E4CA5DC71B9F42B200A17BB0 /* SignupViewController.m in Sources */,
+				E4473DFD1BA221F800CA5902 /* CameraViewController.m in Sources */,
+				E40839B91BB3873C009768AC /* TPKeyboardAvoidingScrollView.m in Sources */,
+				E4CA5DD31B9F7DB400A17BB0 /* ContactTableViewController.m in Sources */,
+				E4CA5DD91B9FB17500A17BB0 /* ContactInfoTableViewController.m in Sources */,
+				E481615C1BA0897900F4BF35 /* CameraTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4CA5D761B9F26C400A17BB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4CA5D811B9F26C400A17BB0 /* LotusConnectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E4CA5D7C1B9F26C400A17BB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E4CA5D5D1B9F26C400A17BB0 /* LotusConnect */;
+			targetProxy = E4CA5D7B1B9F26C400A17BB0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E4CA5D6E1B9F26C400A17BB0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E4CA5D6F1B9F26C400A17BB0 /* Base */,
+			);
+			name = Main.storyboard;
+			path = LotusConnect;
+			sourceTree = "<group>";
+		};
+		E4CA5D731B9F26C400A17BB0 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E4CA5D741B9F26C400A17BB0 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E4CA5D821B9F26C400A17BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dee Greene (T3VWW63SRA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "d45a78bb-f9fa-4b8c-ba3c-c1090421d013";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E4CA5D831B9F26C400A17BB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dee Greene (T3VWW63SRA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "d45a78bb-f9fa-4b8c-ba3c-c1090421d013";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E4CA5D851B9F26C400A17BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dee Greene (T3VWW63SRA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = LotusConnect/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lotusmserv.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d45a78bb-f9fa-4b8c-ba3c-c1090421d013";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E4CA5D861B9F26C400A17BB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dee Greene (T3VWW63SRA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = LotusConnect/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lotusmserv.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d45a78bb-f9fa-4b8c-ba3c-c1090421d013";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E4CA5D881B9F26C400A17BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LotusConnectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lotusmserv.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LotusConnect.app/LotusConnect";
+			};
+			name = Debug;
+		};
+		E4CA5D891B9F26C400A17BB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LotusConnectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lotusmserv.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LotusConnect.app/LotusConnect";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4CA5D591B9F26C300A17BB0 /* Build configuration list for PBXProject "LotusConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4CA5D821B9F26C400A17BB0 /* Debug */,
+				E4CA5D831B9F26C400A17BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4CA5D841B9F26C400A17BB0 /* Build configuration list for PBXNativeTarget "LotusConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4CA5D851B9F26C400A17BB0 /* Debug */,
+				E4CA5D861B9F26C400A17BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4CA5D871B9F26C400A17BB0 /* Build configuration list for PBXNativeTarget "LotusConnectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4CA5D881B9F26C400A17BB0 /* Debug */,
+				E4CA5D891B9F26C400A17BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4CA5D561B9F26C300A17BB0 /* Project object */;
+}
