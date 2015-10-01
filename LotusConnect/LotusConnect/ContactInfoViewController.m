@@ -66,6 +66,8 @@
     PFUser *contact = self.currentContact;
     NSString *phone = [NSString stringWithFormat:@"tel:%@",[contact objectForKey:@"Phone"]];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phone]];
+    
+    //new code
 }
 
 - (IBAction)facetimeContact:(id)sender {
