@@ -68,6 +68,8 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phone]];
     
     //new code
+    
+    //this code should only go in the text_messaging branchj
 }
 
 - (IBAction)facetimeContact:(id)sender {
