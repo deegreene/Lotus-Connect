@@ -69,7 +69,7 @@
     
     //new code
     
-    //this code should only go in the text_messaging branchj
+    //this code should only go in the text_messaging branch
 }
 
 - (IBAction)facetimeContact:(id)sender {
