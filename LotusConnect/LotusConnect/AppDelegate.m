@@ -15,6 +15,8 @@
 
 @implementation AppDelegate
 
+static NSString *const kLayerAppID = @"layer:///apps/staging/4b444ec0-69cf-11e5-b537-ce240200512a";
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
@@ -37,8 +39,6 @@
                                                                              categories:nil];
     [application registerUserNotificationSettings:settings];
     [application registerForRemoteNotifications];
-    
-    //[self generateLocalNotification]; //local notifications
     
     return YES;
 }
