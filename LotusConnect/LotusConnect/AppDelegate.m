@@ -15,7 +15,7 @@
 
 @implementation AppDelegate
 
-static NSString *const kLayerAppID = @"layer:///apps/staging/4b444ec0-69cf-11e5-b537-ce240200512a";
+static NSString *const kLayerAppID = @"layer:///apps/staging/4b444ec0-69cf-11e5-b537-ce240200512a"; //Layer code
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
