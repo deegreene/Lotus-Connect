@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1154BD2F487E36CDD292CE23"
+               BlueprintIdentifier = "3840792468F908F1EEDFCD49"
                BuildableName = "libPods-LotusConnect.a"
                BlueprintName = "Pods-LotusConnect"
                ReferencedContainer = "container:Pods.xcodeproj">

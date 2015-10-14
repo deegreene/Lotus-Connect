@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 #import <Parse/Parse.h>
+#import <LayerKit/LayerKit.h>
 
 @interface AppDelegate ()
 
@@ -15,7 +17,9 @@
 
 @implementation AppDelegate
 
-static NSString *const kLayerAppID = @"layer:///apps/staging/4b444ec0-69cf-11e5-b537-ce240200512a"; //Layer code
+static NSString *const LayerAppIDString = @"layer:///apps/staging/2ae9c9be-69cc-11e5-8ed0-21ca02003d18";
+static NSString *const ParseAppIDString = @"RgOpkkSfRoOFvealb8uUbdElx6e4VwqrNA0ObZLl";
+static NSString *const ParseClientKeyString = @"GsMpLwqknU9c8qfPY0AaWUZzd7lE38ZTQQliM9TH";
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -39,6 +43,30 @@ static NSString *const kLayerAppID = @"layer:///apps/staging/4b444ec0-69cf-11e5-
                                                                              categories:nil];
     [application registerUserNotificationSettings:settings];
     [application registerForRemoteNotifications];
+    
+    //Layer code
+    // Enable Parse local data store for user persistence
+    [Parse enableLocalDatastore];
+    [Parse setApplicationId:ParseAppIDString
+                  clientKey:ParseClientKeyString];
+    
+    // Set default ACLs
+    PFACL *defaultACL = [PFACL ACL];
+    [defaultACL setPublicReadAccess:YES];
+    [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
+    
+    // Initializes a LYRClient object
+    NSURL *appID = [NSURL URLWithString:LayerAppIDString];
+    LYRClient *layerClient = [LYRClient clientWithAppID:appID];
+    layerClient.autodownloadMIMETypes = [NSSet setWithObjects:ATLMIMETypeImagePNG, ATLMIMETypeImageJPEG, ATLMIMETypeImageJPEGPreview, ATLMIMETypeImageGIF, ATLMIMETypeImageGIFPreview, ATLMIMETypeLocation, nil];
+    
+    // Show View Controller
+    ViewController *controller = [ViewController new];
+    controller.layerClient = layerClient;
+    
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:controller];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
