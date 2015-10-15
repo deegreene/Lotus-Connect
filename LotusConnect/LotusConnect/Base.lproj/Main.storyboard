@@ -176,42 +176,26 @@
                             <rect key="frame" x="0.0" y="64" width="600" height="120"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXM-44-ClA">
-                                    <rect key="frame" x="188" y="10" width="100" height="100"/>
-                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXM-44-ClA">
+                                    <rect key="frame" x="250" y="10" width="100" height="100"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="100" id="ZKU-mI-v7s"/>
                                         <constraint firstAttribute="height" constant="100" id="rpA-C0-8Vv"/>
                                     </constraints>
-                                    <state key="normal" title="Email Support">
-                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </state>
-                                    <connections>
-                                        <segue destination="rFW-36-BCI" kind="presentation" id="nDC-13-E0J"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baf-8s-Pbu">
-                                    <rect key="frame" x="312" y="10" width="100" height="100"/>
-                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="100" id="NFA-iA-FQb"/>
-                                        <constraint firstAttribute="height" constant="100" id="PKD-Cy-d3X"/>
-                                    </constraints>
-                                    <state key="normal" title="Call Support">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <state key="normal" title="Get Help">
                                         <color key="titleColor" red="0.0" green="0.0" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
                                     <connections>
-                                        <action selector="callSupport:" destination="dLC-4a-ndR" eventType="touchUpInside" id="FjU-i0-Ac0"/>
+                                        <segue destination="rFW-36-BCI" kind="presentation" id="nDC-13-E0J"/>
                                     </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstItem="dXM-44-ClA" firstAttribute="top" secondItem="WcX-By-v1O" secondAttribute="top" constant="10" id="0Z6-vN-MVg"/>
-                                <constraint firstAttribute="bottom" secondItem="baf-8s-Pbu" secondAttribute="bottom" constant="10" id="V1Q-Ti-GZf"/>
-                                <constraint firstItem="dXM-44-ClA" firstAttribute="centerX" secondItem="WcX-By-v1O" secondAttribute="centerX" constant="-62" id="h8o-UW-edH"/>
-                                <constraint firstItem="baf-8s-Pbu" firstAttribute="centerX" secondItem="WcX-By-v1O" secondAttribute="centerX" constant="62" id="kJk-Zt-oQh"/>
-                                <constraint firstItem="baf-8s-Pbu" firstAttribute="top" secondItem="WcX-By-v1O" secondAttribute="top" constant="10" id="tZe-Nb-2VL"/>
+                                <constraint firstItem="dXM-44-ClA" firstAttribute="centerX" secondItem="WcX-By-v1O" secondAttribute="centerX" id="h8o-UW-edH"/>
                                 <constraint firstAttribute="bottom" secondItem="dXM-44-ClA" secondAttribute="bottom" constant="10" id="x8M-rY-2t6"/>
                             </constraints>
                         </view>
@@ -256,7 +240,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="callSupportButton" destination="baf-8s-Pbu" id="H5F-xM-ePI"/>
                         <outlet property="emailSupportButton" destination="dXM-44-ClA" id="lkT-fa-bqi"/>
                         <outlet property="usernameBarButton" destination="h5Q-md-1Hg" id="Lc9-Bi-ari"/>
                         <segue destination="Qdt-5d-hCB" kind="show" identifier="showImage" id="ZoY-TP-BaE"/>
@@ -511,13 +494,13 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adq-jA-RBq">
                                 <rect key="frame" x="256" y="306" width="80" height="80"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="H5S-eK-HmB"/>
                                     <constraint firstAttribute="width" constant="80" id="yVl-ji-GCq"/>
                                 </constraints>
                                 <state key="normal" title="Call">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="callContact:" destination="aMy-Di-fYo" eventType="touchUpInside" id="dwx-X5-oYN"/>
@@ -531,9 +514,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dt3-bY-APH">
                                 <rect key="frame" x="352" y="306" width="80" height="80"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="FaceTime">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="facetimeContact:" destination="aMy-Di-fYo" eventType="touchUpInside" id="6nJ-hJ-sCm"/>
@@ -954,6 +937,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="emailSupportButton" destination="dx8-BU-Jid" id="Ebx-lu-pjc"/>
                         <outlet property="textView" destination="moV-7V-wly" id="LsF-Vu-vdt"/>
                     </connections>
                 </viewController>

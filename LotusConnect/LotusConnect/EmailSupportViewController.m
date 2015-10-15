@@ -26,6 +26,7 @@
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self.textView becomeFirstResponder];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,18 +44,26 @@
 }
 */
 - (IBAction)emailSupport:(id)sender {
+    
+    if (self.textView.text.length == 0) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Missing Question/Concern" message:@"Opps. Looks like you didn't enter a question or concern. Let us know how we can help you so we can help you get back to work!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        
+        [alertView show];
+    } else {
+    
     NSString *email = @"support@lotusmserv.com";
     //NSString *email = @"deegreene24@yahoo.com";
     
     MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
     mailComposer.mailComposeDelegate = self;
     [mailComposer setToRecipients:[NSArray arrayWithObjects:email,nil]];
-    [mailComposer setSubject:[NSString stringWithFormat: @"Lotus-Connect Support"]];
+    [mailComposer setSubject:[NSString stringWithFormat: @"[Lotus-Connect] Lotus Management Services Support"]];
     NSString *message = self.textView.text;
     NSString *supportText = [NSString stringWithFormat:@"%@", message];
     //supportText = [supportText stringByAppendingString: @"Please describe your problem or question."];
     [mailComposer setMessageBody:supportText isHTML:NO];
     [self presentViewController:mailComposer animated:YES completion:nil];
+    }
 }
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error

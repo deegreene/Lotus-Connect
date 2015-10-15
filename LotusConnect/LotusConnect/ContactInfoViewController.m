@@ -62,15 +62,60 @@
 */
 
 - (IBAction)callContact:(id)sender {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Attention"
+                                                                   message:@"Calling is for emergencies. If this is not an emergency, please go back to the 'Messages' tab and select 'Get Help' and we will be right with you!"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *call = [UIAlertAction actionWithTitle:@"Call Support" style:UIAlertActionStyleDefault
+                                                 handler:^(UIAlertAction * action) {
+                                                     PFUser *contact = self.currentContact;
+                                                     NSString *phone = [NSString stringWithFormat:@"tel:%@",[contact objectForKey:@"Phone"]];
+                                                     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phone]];
+                                                 }];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault
+                                                   handler:^(UIAlertAction * action) {
+                                                       [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
+                                                   }];
+    
+    [alert addAction:call];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
+    /*
     PFUser *contact = self.currentContact;
     NSString *phone = [NSString stringWithFormat:@"tel:%@",[contact objectForKey:@"Phone"]];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phone]];
+     */
 }
 
 - (IBAction)facetimeContact:(id)sender {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Attention"
+                                                                   message:@"Facetime is for emergencies. If this is not an emergency, please go back to the 'Messages' tab and select 'Get Help' and we will be right with you!"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *facetime = [UIAlertAction actionWithTitle:@"Facetime Support" style:UIAlertActionStyleDefault
+                                                 handler:^(UIAlertAction * action) {
+                                                     PFUser *contact = self.currentContact;
+                                                     NSString *facetime = [NSString stringWithFormat:@"facetime:%@",[contact objectForKey:@"Phone"]];
+                                                     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:facetime]];
+                                                 }];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault
+                                                   handler:^(UIAlertAction * action) {
+                                                       [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
+                                                   }];
+    
+    [alert addAction:facetime];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
+    
+    /*
     PFUser *contact = self.currentContact;
     NSString *facetime = [NSString stringWithFormat:@"facetime:%@",[contact objectForKey:@"Phone"]];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:facetime]];
+    */
 }
 
 - (IBAction)emailContact:(id)sender {
