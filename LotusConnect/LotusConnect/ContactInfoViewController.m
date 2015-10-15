@@ -7,7 +7,6 @@
 //
 
 #import "ContactInfoViewController.h"
-#import "GravatarUrlBuilder.h"
 
 @interface ContactInfoViewController () <MFMailComposeViewControllerDelegate>
 

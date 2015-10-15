@@ -864,7 +864,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="moV-7V-wly">
-                                <rect key="frame" x="20" y="72" width="560" height="128"/>
+                                <rect key="frame" x="20" y="109" width="560" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="gJM-MH-bZO"/>
                                 </constraints>
@@ -872,26 +872,50 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dx8-BU-Jid">
-                                <rect key="frame" x="20" y="208" width="560" height="30"/>
+                                <rect key="frame" x="20" y="245" width="560" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Email Support">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="emailSupport:" destination="5iE-6L-fL3" eventType="touchUpInside" id="s1H-s4-qwz"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How May We Help You?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HQ-tJ-Xum">
+                                <rect key="frame" x="210" y="72" width="181" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="moV-7V-wly" secondAttribute="trailing" constant="20" id="7wz-Sg-STt"/>
                             <constraint firstItem="moV-7V-wly" firstAttribute="leading" secondItem="sZQ-Is-24f" secondAttribute="leading" constant="20" id="BX3-6f-OQu"/>
-                            <constraint firstItem="moV-7V-wly" firstAttribute="top" secondItem="ZSG-jy-fJk" secondAttribute="bottom" constant="8" id="JQS-gQ-UXw"/>
+                            <constraint firstItem="moV-7V-wly" firstAttribute="top" secondItem="6HQ-tJ-Xum" secondAttribute="bottom" constant="16" id="EiK-gT-b91"/>
+                            <constraint firstItem="6HQ-tJ-Xum" firstAttribute="centerX" secondItem="sZQ-Is-24f" secondAttribute="centerX" id="IgQ-Lk-5Yh"/>
+                            <constraint firstItem="moV-7V-wly" firstAttribute="top" secondItem="ZSG-jy-fJk" secondAttribute="bottom" constant="24" id="JQS-gQ-UXw"/>
                             <constraint firstItem="dx8-BU-Jid" firstAttribute="top" secondItem="moV-7V-wly" secondAttribute="bottom" constant="8" id="KWd-xp-oAH"/>
                             <constraint firstItem="dx8-BU-Jid" firstAttribute="leading" secondItem="sZQ-Is-24f" secondAttribute="leading" constant="20" id="OoO-uO-TRE"/>
+                            <constraint firstItem="6HQ-tJ-Xum" firstAttribute="top" secondItem="ZSG-jy-fJk" secondAttribute="bottom" constant="8" id="aSU-7d-ARp"/>
                             <constraint firstAttribute="trailing" secondItem="dx8-BU-Jid" secondAttribute="trailing" constant="20" id="bAY-1H-llM"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JQS-gQ-UXw"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="oIx-w8-oV8">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="vmV-dw-yXg"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="vmV-dw-yXg">
+                            <connections>
+                                <action selector="cancel:" destination="5iE-6L-fL3" id="x1S-nb-mn1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="moV-7V-wly" id="LsF-Vu-vdt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J0q-fX-S5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
