@@ -178,15 +178,13 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXM-44-ClA">
                                     <rect key="frame" x="250" y="10" width="100" height="100"/>
-                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="100" id="ZKU-mI-v7s"/>
                                         <constraint firstAttribute="height" constant="100" id="rpA-C0-8Vv"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                    <state key="normal" title="Get Help">
-                                        <color key="titleColor" red="0.0" green="0.0" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
-                                    </state>
+                                    <state key="normal" title="Support"/>
                                     <connections>
                                         <segue destination="rFW-36-BCI" kind="presentation" id="nDC-13-E0J"/>
                                     </connections>
@@ -933,6 +931,11 @@
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="vmV-dw-yXg">
                             <connections>
                                 <action selector="cancel:" destination="5iE-6L-fL3" id="x1S-nb-mn1"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Call Support" id="Hvo-Md-ck4">
+                            <connections>
+                                <action selector="callSupport:" destination="5iE-6L-fL3" id="XFQ-Gi-yld"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

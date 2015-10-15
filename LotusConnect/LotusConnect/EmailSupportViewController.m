@@ -98,4 +98,25 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)callSupport:(id)sender {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Emergency???"
+                                                                   message:@"We want to help you! However, if this is not an emergency, please email us so we can issue you a service ticket."
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *call = [UIAlertAction actionWithTitle:@"Call Support" style:UIAlertActionStyleDefault
+                                                 handler:^(UIAlertAction * action) {
+                                                     NSString *phone = @"tel:4077490019";
+                                                     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phone]];
+                                                 }];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault
+                                                   handler:^(UIAlertAction * action) {
+                                                       [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
+                                                   }];
+    
+    [alert addAction:call];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 @end

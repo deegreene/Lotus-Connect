@@ -62,12 +62,16 @@
 */
 
 - (IBAction)callContact:(id)sender {
-    
+    if ([[[PFUser currentUser] objectForKey:@"allContactsRights"] boolValue]) {
+        PFUser *contact = self.currentContact;
+        NSString *phone = [NSString stringWithFormat:@"tel:%@",[contact objectForKey:@"Phone"]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phone]];
+    }else {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Attention"
-                                                                   message:@"Calling is for emergencies. If this is not an emergency, please go back to the 'Messages' tab and select 'Get Help' and we will be right with you!"
+                                                                   message:@"Calling is for emergencies. If this is not an emergency, please go back to the 'Messages' tab and select 'Support' and we will be right with you!"
                                                             preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction *call = [UIAlertAction actionWithTitle:@"Call Support" style:UIAlertActionStyleDefault
+    UIAlertAction *call = [UIAlertAction actionWithTitle:@"I Need to Call" style:UIAlertActionStyleDefault
                                                  handler:^(UIAlertAction * action) {
                                                      PFUser *contact = self.currentContact;
                                                      NSString *phone = [NSString stringWithFormat:@"tel:%@",[contact objectForKey:@"Phone"]];
@@ -82,6 +86,7 @@
     [alert addAction:call];
     [alert addAction:cancel];
     [self presentViewController:alert animated:YES completion:nil];
+    }
     /*
     PFUser *contact = self.currentContact;
     NSString *phone = [NSString stringWithFormat:@"tel:%@",[contact objectForKey:@"Phone"]];
@@ -91,11 +96,16 @@
 
 - (IBAction)facetimeContact:(id)sender {
     
+    if ([[[PFUser currentUser] objectForKey:@"allContactsRights"] boolValue]) {
+        PFUser *contact = self.currentContact;
+        NSString *facetime = [NSString stringWithFormat:@"facetime:%@",[contact objectForKey:@"Phone"]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:facetime]];
+    } else {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Attention"
-                                                                   message:@"Facetime is for emergencies. If this is not an emergency, please go back to the 'Messages' tab and select 'Get Help' and we will be right with you!"
+                                                                   message:@"Facetime is for emergencies. If this is not an emergency, please go back to the 'Messages' tab and select 'Support' and we will be right with you!"
                                                             preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction *facetime = [UIAlertAction actionWithTitle:@"Facetime Support" style:UIAlertActionStyleDefault
+    UIAlertAction *facetime = [UIAlertAction actionWithTitle:@"I Need to Facetime" style:UIAlertActionStyleDefault
                                                  handler:^(UIAlertAction * action) {
                                                      PFUser *contact = self.currentContact;
                                                      NSString *facetime = [NSString stringWithFormat:@"facetime:%@",[contact objectForKey:@"Phone"]];
@@ -110,6 +120,7 @@
     [alert addAction:facetime];
     [alert addAction:cancel];
     [self presentViewController:alert animated:YES completion:nil];
+    }
     
     /*
     PFUser *contact = self.currentContact;
