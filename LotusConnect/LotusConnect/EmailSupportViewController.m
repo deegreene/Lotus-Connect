@@ -44,6 +44,7 @@
 */
 - (IBAction)emailSupport:(id)sender {
     NSString *email = @"support@lotusmserv.com";
+    //NSString *email = @"deegreene24@yahoo.com";
     
     MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
     mailComposer.mailComposeDelegate = self;
@@ -58,8 +59,30 @@
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
 {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Service Ticket Submitted" message:@"Support has received your message and will be in contact as soon as possible. Your service ticket number will be emailed to you shortly." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            //NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            //NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            [alertView show];
+            [self cancel:(self)];
+            //NSLog(@"Mail sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    
     [self dismissViewControllerAnimated:YES completion:nil];
-    [self cancel:(self)];
+    
 }
 
 - (IBAction)cancel:(id)sender {

@@ -38,6 +38,10 @@
                             action:@selector(refreshMessages)
                   forControlEvents:UIControlEventValueChanged];
     
+    // round buttons
+    self.emailSupportButton.layer.cornerRadius = CGRectGetWidth(self.emailSupportButton.frame) / 2.0f;
+    self.callSupportButton.layer.cornerRadius = CGRectGetWidth(self.callSupportButton.frame) / 2.0f;
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -322,6 +326,30 @@
 
 - (void)reloadTable:(NSNotification *)notification {
     [self.tableView reloadData];
+}
+
+#pragma mark - Support
+
+- (IBAction)callSupport:(id)sender {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Lotus Management Support"
+                                                                   message:nil
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *call = [UIAlertAction actionWithTitle:@"Call Support" style:UIAlertActionStyleDefault
+                                                   handler:^(UIAlertAction * action) {
+                                                       NSString *phone = @"tel:4077490019";
+                                                       [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phone]];
+                                                   }];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault
+                                                   handler:^(UIAlertAction * action) {
+                                                       [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
+                                                   }];
+    
+    [alert addAction:call];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 @end
