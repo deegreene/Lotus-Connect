@@ -57,6 +57,7 @@
 		E4DA03E31BA4680E007777B1 /* SignupCompanyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DA03E21BA4680E007777B1 /* SignupCompanyTableViewController.m */; };
 		E4DA03E61BA46C23007777B1 /* CompanyKeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DA03E51BA46C23007777B1 /* CompanyKeyViewController.m */; };
 		E4EBD9831BAB9C970048142C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EBD9821BAB9C970048142C /* MessageUI.framework */; };
+		E4F803A11BCFE4CD00A93305 /* EmailSupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F803A01BCFE4CD00A93305 /* EmailSupportViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +142,8 @@
 		E4DA03E41BA46C23007777B1 /* CompanyKeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CompanyKeyViewController.h; path = ../CompanyKeyViewController.h; sourceTree = "<group>"; };
 		E4DA03E51BA46C23007777B1 /* CompanyKeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CompanyKeyViewController.m; path = ../CompanyKeyViewController.m; sourceTree = "<group>"; };
 		E4EBD9821BAB9C970048142C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		E4F8039F1BCFE4CD00A93305 /* EmailSupportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailSupportViewController.h; sourceTree = "<group>"; };
+		E4F803A01BCFE4CD00A93305 /* EmailSupportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailSupportViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +287,8 @@
 				E4CA5D731B9F26C400A17BB0 /* LaunchScreen.xib */,
 				E4CA5D711B9F26C400A17BB0 /* Images.xcassets */,
 				E4CA5D611B9F26C400A17BB0 /* Supporting Files */,
+				E4F8039F1BCFE4CD00A93305 /* EmailSupportViewController.h */,
+				E4F803A01BCFE4CD00A93305 /* EmailSupportViewController.m */,
 			);
 			path = LotusConnect;
 			sourceTree = "<group>";
@@ -499,6 +504,7 @@
 				E4CA5D671B9F26C400A17BB0 /* AppDelegate.m in Sources */,
 				E4CA5DD61B9F867000A17BB0 /* ContactInfoViewController.m in Sources */,
 				E4CFE83E1BA0E73E00FB02F1 /* ImageViewController.m in Sources */,
+				E4F803A11BCFE4CD00A93305 /* EmailSupportViewController.m in Sources */,
 				E4CA5D641B9F26C400A17BB0 /* main.m in Sources */,
 				E4454A451BB3AC2B004DB1BA /* GravatarUrlBuilder.m in Sources */,
 				E4CA5DC71B9F42B200A17BB0 /* SignupViewController.m in Sources */,
