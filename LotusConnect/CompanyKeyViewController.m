@@ -18,9 +18,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.companyKeyTextField.delegate = self;
+    
     self.companyName = [self.company objectForKey:@"companyName"];
     self.companyNameLabel.text = self.companyName;
     //self.navigationItem.title = self.companyName;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    self.companyKeyTextField.text = nil;
+    [self.companyKeyTextField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,5 +85,13 @@
     }
      */
 }
+
+#pragma mark - UITextField delegate methods
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
 
 @end

@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view
     
     self.automaticallyAdjustsScrollViewInsets = NO;
 }
@@ -50,19 +50,25 @@
         
         [alertView show];
     } else {
-    
-    NSString *email = @"support@lotusmserv.com";
-    //NSString *email = @"deegreene24@yahoo.com";
-    
-    MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
-    mailComposer.mailComposeDelegate = self;
-    [mailComposer setToRecipients:[NSArray arrayWithObjects:email,nil]];
-    [mailComposer setSubject:[NSString stringWithFormat: @"[Lotus-Connect] Lotus Management Services Support"]];
-    NSString *message = self.textView.text;
-    NSString *supportText = [NSString stringWithFormat:@"%@", message];
-    //supportText = [supportText stringByAppendingString: @"Please describe your problem or question."];
-    [mailComposer setMessageBody:supportText isHTML:NO];
-    [self presentViewController:mailComposer animated:YES completion:nil];
+        
+        NSString *email = @"support@lotusmserv.com";
+        //NSString *email = @"deegreene24@yahoo.com";
+        
+        PFUser *user = [PFUser currentUser];
+        NSString *firstName = [user objectForKey:@"firstName"];
+        NSString *lastName = [user objectForKey:@"lastName"];
+        NSString *fullName = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
+        NSString *company = [user objectForKey:@"companyName"];
+        
+        MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
+        mailComposer.mailComposeDelegate = self;
+        [mailComposer setToRecipients:[NSArray arrayWithObjects:email,nil]];
+        [mailComposer setSubject:[NSString stringWithFormat: @"%@ - Lotus Connect", fullName]];
+        NSString *message = self.textView.text;
+        NSString *supportText = [NSString stringWithFormat:@"%@ (%@) \n\n%@", fullName,company,message];
+        //supportText = [supportText stringByAppendingString: @"Please describe your problem or question."];
+        [mailComposer setMessageBody:supportText isHTML:NO];
+        [self presentViewController:mailComposer animated:YES completion:nil];
     }
 }
 
@@ -99,7 +105,7 @@
 }
 
 - (IBAction)callSupport:(id)sender {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Emergency???"
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Call Support"
                                                                    message:@"We want to help you! However, if this is not an emergency, please email us so we can issue you a service ticket."
                                                             preferredStyle:UIAlertControllerStyleAlert];
     

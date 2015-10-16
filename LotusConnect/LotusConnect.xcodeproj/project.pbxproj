@@ -283,12 +283,11 @@
 				E4473DFE1BA242C800CA5902 /* Inbox */,
 				E4473DFF1BA242ED00CA5902 /* Login */,
 				E4473E001BA242F400CA5902 /* Signup */,
+				E4F803A21BD134B800A93305 /* Support */,
 				E4DA03691BA30152007777B1 /* Unused */,
 				E4CA5D731B9F26C400A17BB0 /* LaunchScreen.xib */,
 				E4CA5D711B9F26C400A17BB0 /* Images.xcassets */,
 				E4CA5D611B9F26C400A17BB0 /* Supporting Files */,
-				E4F8039F1BCFE4CD00A93305 /* EmailSupportViewController.h */,
-				E4F803A01BCFE4CD00A93305 /* EmailSupportViewController.m */,
 			);
 			path = LotusConnect;
 			sourceTree = "<group>";
@@ -382,6 +381,15 @@
 				E48161551BA0718500F4BF35 /* EditProfileViewController.m */,
 			);
 			name = "Edit Profile";
+			sourceTree = "<group>";
+		};
+		E4F803A21BD134B800A93305 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				E4F8039F1BCFE4CD00A93305 /* EmailSupportViewController.h */,
+				E4F803A01BCFE4CD00A93305 /* EmailSupportViewController.m */,
+			);
+			name = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

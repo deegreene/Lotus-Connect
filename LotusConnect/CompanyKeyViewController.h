@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "TPKeyboardAvoidingScrollView.h"
 
-@interface CompanyKeyViewController : UIViewController
+@interface CompanyKeyViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, strong) PFObject *company;
 @property (weak, nonatomic) IBOutlet UITextField *companyKeyTextField;

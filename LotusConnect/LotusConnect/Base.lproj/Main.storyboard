@@ -35,8 +35,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sN-D8-CfX">
-                                <rect key="frame" x="239" y="294" width="123" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sN-D8-CfX">
+                                <rect key="frame" x="20" y="294" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -72,6 +72,9 @@
                                 <state key="normal" title="Delete Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="DeleteAccount:" destination="Wdh-Y4-ks7" eventType="touchUpInside" id="7QF-xf-RR7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -87,9 +90,11 @@
                             <constraint firstItem="xtf-J2-ZcF" firstAttribute="centerX" secondItem="4sN-D8-CfX" secondAttribute="centerX" id="ehp-i2-dJd"/>
                             <constraint firstItem="U8H-YA-BKh" firstAttribute="top" secondItem="5LW-y9-qsa" secondAttribute="bottom" constant="16" id="fyV-oG-0kQ"/>
                             <constraint firstItem="iyl-5x-SmJ" firstAttribute="centerX" secondItem="xtf-J2-ZcF" secondAttribute="centerX" id="i8J-ff-8B7"/>
+                            <constraint firstItem="4sN-D8-CfX" firstAttribute="leading" secondItem="U4O-5R-pMt" secondAttribute="leading" constant="20" id="iqw-Nk-3NH"/>
                             <constraint firstItem="TSB-ks-4uX" firstAttribute="centerX" secondItem="5LW-y9-qsa" secondAttribute="centerX" id="kko-zP-nTT"/>
                             <constraint firstItem="4sN-D8-CfX" firstAttribute="top" secondItem="U8H-YA-BKh" secondAttribute="bottom" constant="8" id="rN4-Xt-OL5"/>
                             <constraint firstItem="d67-ru-Ajy" firstAttribute="centerX" secondItem="iyl-5x-SmJ" secondAttribute="centerX" id="sb2-jF-vNx"/>
+                            <constraint firstAttribute="trailing" secondItem="4sN-D8-CfX" secondAttribute="trailing" constant="20" id="tTn-UK-w6o"/>
                             <constraint firstItem="d67-ru-Ajy" firstAttribute="top" secondItem="iyl-5x-SmJ" secondAttribute="bottom" constant="16" id="wgB-6q-y41"/>
                             <constraint firstItem="U8H-YA-BKh" firstAttribute="centerX" secondItem="5LW-y9-qsa" secondAttribute="centerX" id="wwf-2S-P8Y"/>
                         </constraints>
@@ -885,15 +890,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="moV-7V-wly">
-                                <rect key="frame" x="20" y="109" width="560" height="128"/>
+                                <rect key="frame" x="20" y="109" width="560" height="75"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="gJM-MH-bZO"/>
+                                    <constraint firstAttribute="height" constant="75" id="gJM-MH-bZO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dx8-BU-Jid">
-                                <rect key="frame" x="20" y="245" width="560" height="30"/>
+                                <rect key="frame" x="20" y="192" width="560" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Email Support">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

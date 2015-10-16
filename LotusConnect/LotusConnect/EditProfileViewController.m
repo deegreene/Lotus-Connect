@@ -236,5 +236,26 @@
         [self promptForPhotoRoll];
     }
 }
+- (IBAction)DeleteAccount:(id)sender {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Delete Account"
+                                                                   message:@"Are you sure you want to delete your account? This action cannot be undone."
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *delete = [UIAlertAction actionWithTitle:@"Delete Account" style:UIAlertActionStyleDefault
+                                                   handler:^(UIAlertAction * action) {
+                                                       [self.currentUser deleteInBackground];
+                                                       [self logout:self];
+                                                   }];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault
+                                                   handler:^(UIAlertAction * action) {
+                                                       [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
+                                                   }];
+    
+    [alert addAction:delete];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
+}
 
 @end
