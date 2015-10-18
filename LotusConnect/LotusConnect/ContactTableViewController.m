@@ -53,6 +53,7 @@
         PFQuery *query = [PFUser query];
         [query orderByAscending:@"companyName"];
         [query orderByAscending:@"firstName"];
+        [query whereKey:@"objectId" notEqualTo:[[PFUser currentUser] objectId]];
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (error) {
                 NSLog(@"Error: %@ %@", error, [error userInfo]);

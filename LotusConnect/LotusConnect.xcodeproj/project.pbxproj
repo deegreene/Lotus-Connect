@@ -15,6 +15,7 @@
 		E44D6CA31BB2E81C00CBC118 /* LoginSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44D6CA21BB2E81C00CBC118 /* LoginSignupViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E48161561BA0718500F4BF35 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E48161551BA0718500F4BF35 /* EditProfileViewController.m */; };
 		E481615C1BA0897900F4BF35 /* CameraTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E481615B1BA0897900F4BF35 /* CameraTableViewController.m */; };
+		E4877BF31BD2A9470004251A /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4877BF21BD2A9470004251A /* ForgotPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E4CA5D641B9F26C400A17BB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CA5D631B9F26C400A17BB0 /* main.m */; };
 		E4CA5D671B9F26C400A17BB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CA5D661B9F26C400A17BB0 /* AppDelegate.m */; };
 		E4CA5D701B9F26C400A17BB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4CA5D6E1B9F26C400A17BB0 /* Main.storyboard */; };
@@ -57,6 +58,8 @@
 		E4DA03E31BA4680E007777B1 /* SignupCompanyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DA03E21BA4680E007777B1 /* SignupCompanyTableViewController.m */; };
 		E4DA03E61BA46C23007777B1 /* CompanyKeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DA03E51BA46C23007777B1 /* CompanyKeyViewController.m */; };
 		E4EBD9831BAB9C970048142C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EBD9821BAB9C970048142C /* MessageUI.framework */; };
+		E4F803A11BCFE4CD00A93305 /* EmailSupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F803A01BCFE4CD00A93305 /* EmailSupportViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E4F803A51BD142BB00A93305 /* EditInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F803A41BD142BA00A93305 /* EditInfoViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,8 @@
 		E48161551BA0718500F4BF35 /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
 		E481615A1BA0897900F4BF35 /* CameraTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraTableViewController.h; sourceTree = "<group>"; };
 		E481615B1BA0897900F4BF35 /* CameraTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraTableViewController.m; sourceTree = "<group>"; };
+		E4877BF11BD2A9470004251A /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
+		E4877BF21BD2A9470004251A /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
 		E4CA5D5E1B9F26C400A17BB0 /* LotusConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LotusConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4CA5D621B9F26C400A17BB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4CA5D631B9F26C400A17BB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -141,6 +146,10 @@
 		E4DA03E41BA46C23007777B1 /* CompanyKeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CompanyKeyViewController.h; path = ../CompanyKeyViewController.h; sourceTree = "<group>"; };
 		E4DA03E51BA46C23007777B1 /* CompanyKeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CompanyKeyViewController.m; path = ../CompanyKeyViewController.m; sourceTree = "<group>"; };
 		E4EBD9821BAB9C970048142C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		E4F8039F1BCFE4CD00A93305 /* EmailSupportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailSupportViewController.h; sourceTree = "<group>"; };
+		E4F803A01BCFE4CD00A93305 /* EmailSupportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailSupportViewController.m; sourceTree = "<group>"; };
+		E4F803A31BD142BA00A93305 /* EditInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditInfoViewController.h; sourceTree = "<group>"; };
+		E4F803A41BD142BA00A93305 /* EditInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditInfoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +219,8 @@
 				E44D6CA21BB2E81C00CBC118 /* LoginSignupViewController.m */,
 				E4CA5DC21B9F42A000A17BB0 /* LoginViewController.h */,
 				E4CA5DC31B9F42A000A17BB0 /* LoginViewController.m */,
+				E4877BF11BD2A9470004251A /* ForgotPasswordViewController.h */,
+				E4877BF21BD2A9470004251A /* ForgotPasswordViewController.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -280,6 +291,7 @@
 				E4473DFE1BA242C800CA5902 /* Inbox */,
 				E4473DFF1BA242ED00CA5902 /* Login */,
 				E4473E001BA242F400CA5902 /* Signup */,
+				E4F803A21BD134B800A93305 /* Support */,
 				E4DA03691BA30152007777B1 /* Unused */,
 				E4CA5D731B9F26C400A17BB0 /* LaunchScreen.xib */,
 				E4CA5D711B9F26C400A17BB0 /* Images.xcassets */,
@@ -375,8 +387,19 @@
 			children = (
 				E48161541BA0718500F4BF35 /* EditProfileViewController.h */,
 				E48161551BA0718500F4BF35 /* EditProfileViewController.m */,
+				E4F803A31BD142BA00A93305 /* EditInfoViewController.h */,
+				E4F803A41BD142BA00A93305 /* EditInfoViewController.m */,
 			);
 			name = "Edit Profile";
+			sourceTree = "<group>";
+		};
+		E4F803A21BD134B800A93305 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				E4F8039F1BCFE4CD00A93305 /* EmailSupportViewController.h */,
+				E4F803A01BCFE4CD00A93305 /* EmailSupportViewController.m */,
+			);
+			name = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,6 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4F803A51BD142BB00A93305 /* EditInfoViewController.m in Sources */,
 				E4CA5DCA1B9F569A00A17BB0 /* VerifyEmailViewController.m in Sources */,
 				E4DA03E31BA4680E007777B1 /* SignupCompanyTableViewController.m in Sources */,
 				E4CA5DC41B9F42A000A17BB0 /* LoginViewController.m in Sources */,
@@ -499,12 +523,14 @@
 				E4CA5D671B9F26C400A17BB0 /* AppDelegate.m in Sources */,
 				E4CA5DD61B9F867000A17BB0 /* ContactInfoViewController.m in Sources */,
 				E4CFE83E1BA0E73E00FB02F1 /* ImageViewController.m in Sources */,
+				E4F803A11BCFE4CD00A93305 /* EmailSupportViewController.m in Sources */,
 				E4CA5D641B9F26C400A17BB0 /* main.m in Sources */,
 				E4454A451BB3AC2B004DB1BA /* GravatarUrlBuilder.m in Sources */,
 				E4CA5DC71B9F42B200A17BB0 /* SignupViewController.m in Sources */,
 				E4473DFD1BA221F800CA5902 /* CameraViewController.m in Sources */,
 				E40839B91BB3873C009768AC /* TPKeyboardAvoidingScrollView.m in Sources */,
 				E4CA5DD31B9F7DB400A17BB0 /* ContactTableViewController.m in Sources */,
+				E4877BF31BD2A9470004251A /* ForgotPasswordViewController.m in Sources */,
 				E4CA5DD91B9FB17500A17BB0 /* ContactInfoTableViewController.m in Sources */,
 				E481615C1BA0897900F4BF35 /* CameraTableViewController.m in Sources */,
 			);

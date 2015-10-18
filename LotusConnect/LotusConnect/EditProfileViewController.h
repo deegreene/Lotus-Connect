@@ -27,6 +27,8 @@
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSString *phone;
 
+@property (weak, nonatomic) IBOutlet UIButton *editInfoButton;
+
 - (IBAction)cancel:(id)sender;
 - (IBAction)logout:(id)sender;
 

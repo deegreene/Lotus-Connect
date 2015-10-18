@@ -20,4 +20,7 @@
 
 @property (nonatomic, strong) MPMoviePlayerController *moviePlayer;
 
+@property (weak, nonatomic) IBOutlet UIButton *emailSupportButton;
+@property (weak, nonatomic) IBOutlet UIButton *callSupportButton;
+
 @end

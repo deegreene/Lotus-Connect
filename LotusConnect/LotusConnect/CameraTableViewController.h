@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSString *videoFilePath;
 @property (nonatomic, strong) NSArray *contacts;
 @property (nonatomic, strong) NSMutableArray *imageOrVideoRecipients;
+@property (nonatomic, strong) NSMutableArray *imageOrVideoRecipientNames;
 
 // for alphabetical scrolling
 @property (nonatomic, strong) NSMutableDictionary *companiesDictionary;

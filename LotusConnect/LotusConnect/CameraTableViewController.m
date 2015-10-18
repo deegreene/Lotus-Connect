@@ -23,6 +23,7 @@
     
     // create a mutable array to store the recipients of an image/video
     self.imageOrVideoRecipients = [[NSMutableArray alloc] init];
+    self.imageOrVideoRecipientNames = [[NSMutableArray alloc] init];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -56,6 +57,7 @@
         //displaying contacts to send a picture/video to
         PFQuery *query = [PFUser query];
         [query orderByAscending:@"companyName"];
+        [query whereKey:@"objectId" notEqualTo:[[PFUser currentUser] objectId]];
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (error) {
                 NSLog(@"Error: %@ %@", error, [error userInfo]);
@@ -234,10 +236,17 @@
     if (![[[PFUser currentUser] objectForKey:@"allContactsRights"] boolValue]) {
         //user can only see and send to lotus employees
         if ([[user objectForKey:@"companyName"] isEqualToString:@"Lotus Management Services"]) {
+            /* uncomment to have lotus auto selected
+             
             cell.accessoryType = UITableViewCellAccessoryCheckmark;
-            //NSLog(@"%@", self.imageOrVideoRecipients);
             [self.imageOrVideoRecipients addObject:[user objectId]];
-            //NSLog(@"%@", self.imageOrVideoRecipients);
+             */
+            
+            if ([self.imageOrVideoRecipients containsObject:[user objectId]]) {
+                cell.accessoryType = UITableViewCellAccessoryCheckmark;
+            } else {
+                cell.accessoryType = UITableViewCellAccessoryNone;
+            }
         }
     } else {
         //user can choose who to send to
@@ -281,14 +290,25 @@
         if (cell.accessoryType == UITableViewCellAccessoryNone) {
             cell.accessoryType = UITableViewCellAccessoryCheckmark;
             [self.imageOrVideoRecipients addObject:user.objectId]; // add contact if checked
+            [self.imageOrVideoRecipientNames addObject:[user objectForKey:@"firstName"]];
         } else {
             cell.accessoryType = UITableViewCellAccessoryNone;
             [self.imageOrVideoRecipients removeObject:user.objectId]; // remove contact if not
+            [self.imageOrVideoRecipientNames removeObject:[user objectForKey:@"firstName"]];
         }
         
     } else { // user can only send to lotus employees
         
-        // do nothing
+        // alow them to send to a select lotus employee
+        if (cell.accessoryType == UITableViewCellAccessoryNone) {
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+            [self.imageOrVideoRecipients addObject:user.objectId]; // add contact if checked
+            [self.imageOrVideoRecipientNames addObject:[user objectForKey:@"firstName"]];
+        } else {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+            [self.imageOrVideoRecipients removeObject:user.objectId]; // remove contact if not
+            [self.imageOrVideoRecipientNames removeObject:[user objectForKey:@"firstName"]];
+        }
     }
     
     //only allow user to send message if recipients selected
@@ -308,6 +328,7 @@
     [self dismissViewControllerAnimated:NO completion:nil];
     
     [self.imageOrVideoRecipients removeAllObjects];
+    [self.imageOrVideoRecipientNames removeAllObjects];
     
     // send user back to inbox after camera view is dismissed
     self.tabBarController.selectedIndex = 0;
@@ -398,6 +419,7 @@
             [message setObject:file forKey:@"file"];
             [message setObject:fileType forKey:@"fileType"];
             [message setObject:self.imageOrVideoRecipients forKey:@"recipientIds"];
+            [message setObject:self.imageOrVideoRecipientNames forKey:@"recipientNames"];
             [message setObject:[[PFUser currentUser] objectId] forKey:@"senderId"];
             [message setObject:[[PFUser currentUser] username] forKey:@"senderEmail"];
             
@@ -464,6 +486,7 @@
     self.image = nil;
     self.videoFilePath = nil;
     [self.imageOrVideoRecipients removeAllObjects];
+    [self.imageOrVideoRecipientNames removeAllObjects];
 }
 
 - (UIImage *)resizeImage:(UIImage *)image toWidth:(float)width andHeight:(float)height {
