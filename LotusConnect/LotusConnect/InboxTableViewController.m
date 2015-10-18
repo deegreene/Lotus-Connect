@@ -297,6 +297,7 @@
         self.moviePlayer.contentURL = fileUrl;
         [self.moviePlayer prepareToPlay];
         [self.moviePlayer thumbnailImageAtTime:0 timeOption:MPMovieTimeOptionNearestKeyFrame];
+        //[self.moviePlayer.view setFrame: self.view.bounds];
         
         // add it to the view controller so we can see it
         [self.view addSubview:self.moviePlayer.view];

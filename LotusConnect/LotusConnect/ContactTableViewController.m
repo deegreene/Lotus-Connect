@@ -56,7 +56,10 @@
         [query whereKey:@"objectId" notEqualTo:[[PFUser currentUser] objectId]];
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (error) {
-                NSLog(@"Error: %@ %@", error, [error userInfo]);
+                //NSLog(@"Error: %@ %@", error, [error userInfo]);
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry, an error has occured." message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                
+                [alertView show];
             } else {
                 self.contacts = objects;
                 //NSLog(@"contact names: %@", self.contacts);
@@ -116,7 +119,10 @@
         [query orderByAscending:@"companyName"];
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (error) {
-                NSLog(@"Error: %@ %@", error, [error userInfo]);
+                //NSLog(@"Error: %@ %@", error, [error userInfo]);
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry, an error has occured." message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                
+                [alertView show];
             } else {
                 self.contacts = objects;
                 //NSLog(@"contact names: %@", self.contacts);

@@ -76,6 +76,8 @@
 {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Service Ticket Submitted" message:@"Support has received your message and will be in contact as soon as possible. Your service ticket number will be emailed to you shortly." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     
+    UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Sorry, an error has occured." message:[error localizedDescription] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    
     switch (result)
     {
         case MFMailComposeResultCancelled:
@@ -90,7 +92,8 @@
             //NSLog(@"Mail sent");
             break;
         case MFMailComposeResultFailed:
-            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            //NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            [errorAlertView show];
             break;
         default:
             break;

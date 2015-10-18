@@ -60,7 +60,10 @@
         [query whereKey:@"objectId" notEqualTo:[[PFUser currentUser] objectId]];
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (error) {
-                NSLog(@"Error: %@ %@", error, [error userInfo]);
+                //NSLog(@"Error: %@ %@", error, [error userInfo]);
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry, an error has occured." message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                
+                [alertView show];
             } else {
                 self.contacts = objects;
                 //NSLog(@"contacts names: %@", self.contacts);
@@ -122,7 +125,10 @@
         [query orderByAscending:@"companyName"];
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (error) {
-                NSLog(@"Error: %@ %@", error, [error userInfo]);
+                //NSLog(@"Error: %@ %@", error, [error userInfo]);
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry, an error has occured." message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                
+                [alertView show];
             } else {
                 self.contacts = objects;
                 //NSLog(@"contacts names: %@", self.contacts);
@@ -443,13 +449,13 @@
                     
                     PFQuery *recipients = [PFUser query];
                     [recipients whereKey:@"objectId" containedIn:self.imageOrVideoRecipients];
-                    NSLog(@"%@", recipients);
+                    //NSLog(@"%@", recipients);
                     
                     //send to msg recipients
                     [pushQuery whereKey:@"user" matchesQuery:recipients];
 
-                    NSLog(@"query %@", pushQuery);
-                    NSLog(@"sent to: %@", self.imageOrVideoRecipients);
+                    //NSLog(@"query %@", pushQuery);
+                    //NSLog(@"sent to: %@", self.imageOrVideoRecipients);
                     
                     // Send push notification to query
                     NSString *companyName = [[PFUser currentUser] objectForKey:@"companyName"];
