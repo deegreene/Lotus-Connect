@@ -10,6 +10,7 @@
 #import "LoginViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <Parse/Parse.h>
+#import "EditInfoViewController.h"
 
 @interface EditProfileViewController ()
 
@@ -45,7 +46,7 @@
     
     //set profile image
     if ([self.currentUser objectForKey:@"profileImage"] == nil) {
-        self.profileImage.image = [UIImage imageNamed:@"friends"];
+        self.profileImage.image = [UIImage imageNamed:@"empty-profile-image"];
     }else {
         // download image from Parse.com
         PFFile *imageFile = [self.currentUser objectForKey:@"profileImage"];
@@ -54,11 +55,20 @@
         
        self.profileImage.image = [UIImage imageWithData:imageData];
     }
+    
+    // round buttons
+    self.editInfoButton.layer.cornerRadius = CGRectGetWidth(self.editInfoButton.frame) / 2.0f;
 }
 
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"editInfo"]) {
+        EditInfoViewController *vc = (EditInfoViewController *)segue.destinationViewController;
+        
+        vc.currentUser = self.currentUser;
+        //[segue.destinationViewController setHidesBottomBarWhenPushed:YES];
+    }
 }
 
 - (IBAction)cancel:(id)sender {

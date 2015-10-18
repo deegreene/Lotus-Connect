@@ -47,12 +47,9 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self.tableView reloadData];
-    
     [self getAllMessages];
     
     [self.tableView reloadData];
-    //NSLog(@"%@", self.unreadMessages);
 }
 
 - (void)getAllMessages {
@@ -178,6 +175,10 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     PFObject *message = [self.messages objectAtIndex:indexPath.row];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MMM dd, yyyy, h:mm a"];
+    NSString *date = [dateFormatter stringFromDate:message.createdAt];
+
     
     //look for messages that user sent to someone other than themself
     if ([[message objectForKey:@"senderId"] isEqualToString:[[PFUser currentUser] objectId]] &&
@@ -188,13 +189,13 @@
         cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:17.0f];
         cell.textLabel.textColor = [UIColor blackColor];
         cell.backgroundColor = [UIColor whiteColor];
-        cell.detailTextLabel.text = nil;
+        cell.detailTextLabel.text = date;
         
     } else { // user receieved a message
         
-        cell.textLabel.text = [message objectForKey:@"senderFullName"];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ : %@",[message objectForKey:@"senderFullName"] , [message objectForKey:@"senderCompany"]];
         cell.textLabel.textColor = [UIColor blackColor];
-        cell.detailTextLabel.text = [message objectForKey:@"senderCompany"];
+        cell.detailTextLabel.text = date;
         
         //NSLog(@"%lu", (unsigned long)self.unreadMessages.count);
         if ([[message objectForKey:@"readBy"] containsObject:[[PFUser currentUser] objectId]]) {

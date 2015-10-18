@@ -29,7 +29,7 @@
     
     //set profile image
     if ([contact objectForKey:@"profileImage"] == nil) {
-        self.profileImage.image = [UIImage imageNamed:@"friends"];
+        self.profileImage.image = [UIImage imageNamed:@"empty-profile-image"];
     }else {
         // download image from Parse.com
         PFFile *imageFile = [contact objectForKey:@"profileImage"];

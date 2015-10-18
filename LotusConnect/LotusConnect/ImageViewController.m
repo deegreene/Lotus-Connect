@@ -17,8 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *senderName = [self.message objectForKey:@"senderFullName"];
-    self.navigationItem.title = senderName;
+    //NSString *senderName = [self.message objectForKey:@"senderFullName"];
+    //self.navigationItem.title = senderName;
     
     // download image from Parse.com
     PFFile *imageFile = [self.message objectForKey:@"file"];
@@ -44,7 +44,7 @@
 */
 
 - (IBAction)imageWasPressed:(id)sender {
-    
+    /*
     if (self.navigationController.navigationBar.hidden == YES) {
         [self.navigationController setNavigationBarHidden: NO animated:NO];
         [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
@@ -52,6 +52,7 @@
         [self.navigationController setNavigationBarHidden: YES animated:NO];
         [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
     }
+     */
 }
 
 @end
